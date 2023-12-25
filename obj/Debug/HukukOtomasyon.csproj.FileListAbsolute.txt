@@ -1,0 +1,13 @@
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\bin\Debug\HukukOtomasyon.exe.config
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\bin\Debug\HukukOtomasyon.exe
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\bin\Debug\HukukOtomasyon.pdb
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.csproj.AssemblyReference.cache
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Properties.Resources.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.csproj.GenerateResource.cache
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.csproj.CoreCompileInputs.cache
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.exe
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.pdb
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Giris.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Anasayfa.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.MuvekkilEkle.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.MuvekkilIslemleri.resources
