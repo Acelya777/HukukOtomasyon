@@ -11,3 +11,11 @@ C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasy
 C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Anasayfa.resources
 C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.MuvekkilEkle.resources
 C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.MuvekkilIslemleri.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Avukat.AvukatEkle.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Avukat.AvukatIslemleri.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Hakim.HakimEkle.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Hakim.HakimIslemleri.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.DavaYönetimi.YönetimSayfası.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.DavaYönetimi.Dava.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.DavaYönetimi.Dosya.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.DavaYönetimi.Mahkeme.resources

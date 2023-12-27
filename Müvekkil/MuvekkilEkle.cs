@@ -34,6 +34,7 @@ namespace HukukOtomasyon
                 {
                     using (SqlCommand cmd = new SqlCommand("INSERT INTO Muvekkil(Ad, Soyad, TC_Num, Dogum_Tarihi, Cinsiyet, Telefon_Num, E_posta, Adres) VALUES (@Param1, @Param2,@Param3, @Param4,@Param5, @Param6,@Param7, @Param8)", connection))
                     {
+
                         cmd.Parameters.AddWithValue("@Param1", ad.Text);
                         cmd.Parameters.AddWithValue("@Param2", soyad.Text);
                         cmd.Parameters.AddWithValue("@Param3", TC.Text);
@@ -114,6 +115,9 @@ namespace HukukOtomasyon
         private void button1_Click(object sender, EventArgs e)
         {
             MuvekkilAdd();
+            MuvekkilIslemleri muvekkilIslemleri = new MuvekkilIslemleri();
+            muvekkilIslemleri.Show();
+            this.Hide();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

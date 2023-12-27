@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace HukukOtomasyon
 {
-    internal class Muvekkil
+    public class Muvekkil
     {
+        public int MuvekkilID {  get; set; }
         public String Ad {  get; set; }
         public String Soyad { get; set; }
         public String TC_Num { get; set; }
-        public String DogumTarihi { get; set; }
+        public String Dogum_Tarihi { get; set; }
         public String Cinsiyet { get; set; }
         public String Telefon_Num { get; set; }
         public String E_posta { get; set; }

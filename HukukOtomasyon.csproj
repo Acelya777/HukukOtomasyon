@@ -64,6 +64,30 @@
     <Compile Include="Avukat\AvukatIslemleri.Designer.cs">
       <DependentUpon>AvukatIslemleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="DavaYönetimi\Dava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaYönetimi\Dava.Designer.cs">
+      <DependentUpon>Dava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaYönetimi\Dosya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaYönetimi\Dosya.Designer.cs">
+      <DependentUpon>Dosya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaYönetimi\Mahkeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaYönetimi\Mahkeme.Designer.cs">
+      <DependentUpon>Mahkeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaYönetimi\YönetimSayfası.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaYönetimi\YönetimSayfası.Designer.cs">
+      <DependentUpon>YönetimSayfası.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hakim\HakimEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,8 +100,8 @@
     <Compile Include="Hakim\HakimIslemleri.Designer.cs">
       <DependentUpon>HakimIslemleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Avukat.cs" />
-    <Compile Include="Models\Hakim.cs" />
+    <Compile Include="Models\AvukatModel.cs" />
+    <Compile Include="Models\HakimModel.cs" />
     <Compile Include="Models\Muvekkil.cs" />
     <Compile Include="Giris.cs">
       <SubType>Form</SubType>
@@ -97,6 +121,12 @@
     <Compile Include="Müvekkil\MuvekkilEkle.Designer.cs">
       <DependentUpon>MuvekkilEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Odeme\OdemeSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odeme\OdemeSayfasi.Designer.cs">
+      <DependentUpon>OdemeSayfasi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -105,11 +135,41 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Services\Services.cs" />
+    <Compile Include="Takvim\TakvimSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takvim\TakvimSayfasi.Designer.cs">
+      <DependentUpon>TakvimSayfasi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Avukat\AvukatEkle.resx">
+      <DependentUpon>AvukatEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Avukat\AvukatIslemleri.resx">
+      <DependentUpon>AvukatIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaYönetimi\Dava.resx">
+      <DependentUpon>Dava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaYönetimi\Dosya.resx">
+      <DependentUpon>Dosya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaYönetimi\Mahkeme.resx">
+      <DependentUpon>Mahkeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaYönetimi\YönetimSayfası.resx">
+      <DependentUpon>YönetimSayfası.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hakim\HakimEkle.resx">
+      <DependentUpon>HakimEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hakim\HakimIslemleri.resx">
+      <DependentUpon>HakimIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Müvekkil\MuvekkilIslemleri.resx">
       <DependentUpon>MuvekkilIslemleri.cs</DependentUpon>
