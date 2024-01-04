@@ -173,10 +173,13 @@
         Xbv+B4nXJeDk2iuKAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="Silme.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfEAAAEcCAYAAADX6I0hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAQmtJREFUeF7t3d227EaRaOF+/9vu5s+Gc0a3wWAb6AbDeTyOQiotRYamIpWVkSrV
+        wQAADsEBuJFr7QAAQmtJREFUeF7t3d227EaRaOF+/9vu5s+Gc0a3wWAb6AbDeTyOQiotRYamIpWVkSrV
         WnHxDQ+2MkKqxcXcu7yr/G+/+fGv/9J+/cOfS3/6cfLDoV/98U+FX/7hj01+8fvvC3RGq5231y17/lfG
         r7//U2F33rxe+plE+M0PP/7rGzH9/L+d/Hb6/2KE3/34l0v9nz//9VZ+V0EzX8n//cv/FP7rr/8byu63
         aKbHf//P3y713f/+PNTv//aPLq377HmLZu7sDz//8619/4//96+MuJERH4tC8UoUbo1mvpLRUbX7LZrp

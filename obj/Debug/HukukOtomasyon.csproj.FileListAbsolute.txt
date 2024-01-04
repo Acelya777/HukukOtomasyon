@@ -17,5 +17,6 @@ C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasy
 C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Hakim.HakimIslemleri.resources
 C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.DavaYönetimi.YönetimSayfası.resources
 C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.DavaYönetimi.Dava.resources
-C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.DavaYönetimi.Dosya.resources
 C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.DavaYönetimi.Mahkeme.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Odeme.OdemeSayfasi.resources
+C:\Users\acely\source\repos\HukukOtomasyon\HukukOtomasyon\obj\Debug\HukukOtomasyon.Takvim.TakvimSayfasi.resources

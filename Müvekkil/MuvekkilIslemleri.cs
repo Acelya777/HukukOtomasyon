@@ -128,37 +128,71 @@ namespace HukukOtomasyon
                 Console.WriteLine(ex.ToString());
             }
         }
-        public void MsSqlDelete(int MuvekkilID)
-        {
-            HukukOtomasyon.Service.Services services = new HukukOtomasyon.Service.Services();
+        //public void MsSqlDelete(int MuvekkilID)
+        //{
+        //    HukukOtomasyon.Service.Services services = new HukukOtomasyon.Service.Services();
 
-            using (SqlConnection connection = services.ConnectDatabase())
-            {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM Dava WHERE MuvekkilID = @MuvekkilID; DELETE FROM MuvekkilGelirGider WHERE MuvekkilID = @MuvekkilID;", connection))
-                {
-                    cmd.Parameters.AddWithValue("@MuvekkilID", MuvekkilID);
-                    connection.Open();
-                    cmd.ExecuteNonQuery();
+        //    using (SqlConnection connection = services.ConnectDatabase())
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand("DELETE FROM Dava WHERE MuvekkilID = @MuvekkilID; DELETE FROM MuvekkilGelirGider WHERE MuvekkilID = @MuvekkilID;", connection))
+        //        {
+        //            cmd.Parameters.AddWithValue("@MuvekkilID", MuvekkilID);
+        //            connection.Open();
+        //            cmd.ExecuteNonQuery();
 
-                    cmd.CommandText = "DELETE FROM Muvekkil WHERE MuvekkilID = @MuvekkilID";
-                    int result = cmd.ExecuteNonQuery();
+        //            cmd.CommandText = "DELETE FROM Muvekkil WHERE MuvekkilID = @MuvekkilID";
+        //            int result = cmd.ExecuteNonQuery();
 
-                    if (result > 0)
-                    {
-                        MessageBox.Show("Silme işlemi başarılı.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Silme işlemi başarısız.");
-                    }
+        //            if (result > 0)
+        //            {
+        //                MessageBox.Show("Silme işlemi başarılı.");
+        //            }
+        //            else
+        //            {
+        //                MessageBox.Show("Silme işlemi başarısız.");
+        //            }
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            if(e.RowIndex>=0 && e.ColumnIndex == dataGridView1.Columns["Silme"].Index)
+            {
+                int muvekkilID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["MuvekkilID"].Value);
+
+                HukukOtomasyon.Service.Services services = new HukukOtomasyon.Service.Services();
+
+                using (SqlConnection connection = services.ConnectDatabase())
+                {
+                    using (SqlCommand cmd = new SqlCommand("DELETE FROM OdemeTablosu WHERE MuvekkilID = @MuvekkilID;" +
+                        " DELETE FROM Dosya WHERE MuvekkilID = @MuvekkilID;" +
+                        " DELETE FROM Dava WHERE MuvekkilID = @MuvekkilID; " +
+                        " DELETE FROM Muvekkil WHERE MuvekkilID = @MuvekkilID", connection))
+                    {
+                        connection.Open();
+
+                        cmd.Parameters.AddWithValue("@muvekkilID", muvekkilID);
+
+
+                        int affectedRows = cmd.ExecuteNonQuery();
+                    
+
+                        if (affectedRows > 0)
+                        {
+                            MessageBox.Show("Silme işlemi başarılı.");
+                            MuvekkilIslemleri muvekkilIslemleri = new MuvekkilIslemleri();
+                            muvekkilIslemleri.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Silme işlemi başarısız.");
+                        }
+                    }
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -190,23 +224,8 @@ namespace HukukOtomasyon
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string muvekkilID = textBox1.Text;
-            Console.WriteLine(muvekkilID.ToString());
-            int muvekkilIdInt;
-
-            if (int.TryParse(muvekkilID, out muvekkilIdInt))
-            {
-                
-                MsSqlDelete(muvekkilIdInt);
-                MuvekkilIslemleri muvekkilIslemleri= new MuvekkilIslemleri();
-                muvekkilIslemleri.Show();
-                this.Hide();
-            }
-            else
-            {
-                // Dönüşüm başarısız, hata mesajı göster
-                MessageBox.Show("Giriş dizesi doğru biçimde değil. Lütfen geçerli bir MuvekkilID giriniz.");
-            }
+            
+         
         }
     }
 }

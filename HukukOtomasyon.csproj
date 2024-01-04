@@ -70,12 +70,6 @@
     <Compile Include="DavaYönetimi\Dava.Designer.cs">
       <DependentUpon>Dava.cs</DependentUpon>
     </Compile>
-    <Compile Include="DavaYönetimi\Dosya.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DavaYönetimi\Dosya.Designer.cs">
-      <DependentUpon>Dosya.cs</DependentUpon>
-    </Compile>
     <Compile Include="DavaYönetimi\Mahkeme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,7 +95,10 @@
       <DependentUpon>HakimIslemleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\AvukatModel.cs" />
+    <Compile Include="Models\AvukatTakvim.cs" />
+    <Compile Include="Models\DavaSınıfı.cs" />
     <Compile Include="Models\HakimModel.cs" />
+    <Compile Include="Models\MahkemeSınıfı.cs" />
     <Compile Include="Models\Muvekkil.cs" />
     <Compile Include="Giris.cs">
       <SubType>Form</SubType>
@@ -109,6 +106,7 @@
     <Compile Include="Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\OdemeSınıfı.cs" />
     <Compile Include="Müvekkil\MuvekkilIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,10 +119,10 @@
     <Compile Include="Müvekkil\MuvekkilEkle.Designer.cs">
       <DependentUpon>MuvekkilEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Odeme\OdemeSayfasi.cs">
+    <Compile Include="OdemeForm\OdemeSayfasi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Odeme\OdemeSayfasi.Designer.cs">
+    <Compile Include="OdemeForm\OdemeSayfasi.Designer.cs">
       <DependentUpon>OdemeSayfasi.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -153,9 +151,6 @@
     <EmbeddedResource Include="DavaYönetimi\Dava.resx">
       <DependentUpon>Dava.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DavaYönetimi\Dosya.resx">
-      <DependentUpon>Dosya.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DavaYönetimi\Mahkeme.resx">
       <DependentUpon>Mahkeme.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,10 +172,16 @@
     <EmbeddedResource Include="Müvekkil\MuvekkilEkle.resx">
       <DependentUpon>MuvekkilEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OdemeForm\OdemeSayfasi.resx">
+      <DependentUpon>OdemeSayfasi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takvim\TakvimSayfasi.resx">
+      <DependentUpon>TakvimSayfasi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

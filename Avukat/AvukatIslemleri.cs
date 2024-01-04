@@ -136,7 +136,39 @@ namespace HukukOtomasyon.Avukat
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["Silme"].Index)
+            {
+                int avukatID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["AvukatID"].Value);
+
+                HukukOtomasyon.Service.Services services = new HukukOtomasyon.Service.Services();
+
+                using (SqlConnection connection = services.ConnectDatabase())
+                {
+                    using (SqlCommand cmd = new SqlCommand("DELETE FROM Dava WHERE AvukatID = @AvukatID;DELETE FROM AvukatTakvim WHERE AvukatID = @AvukatID", connection))
+                    {
+                        connection.Open();
+
+                        cmd.Parameters.AddWithValue("@AvukatID", avukatID);
+                        cmd.CommandText = "DELETE FROM Avukat WHERE AvukatID = @AvukatID";
+
+
+                        int affectedRows = cmd.ExecuteNonQuery();
+
+
+                        if (affectedRows > 0)
+                        {
+                            MessageBox.Show("Silme işlemi başarılı.");
+                            AvukatIslemleri avukatIslemleri = new AvukatIslemleri();
+                            avukatIslemleri.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Silme işlemi başarısız.");
+                        }
+                    }
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -164,23 +196,7 @@ namespace HukukOtomasyon.Avukat
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string avukatID = avukatId.Text;
-            Console.WriteLine(avukatID.ToString());
-            int avukatIdInt;
-
-            if (int.TryParse(avukatID, out avukatIdInt))
-            {
-
-                MsSqlDelete(avukatIdInt);
-                AvukatIslemleri avukatIslemleri = new AvukatIslemleri();
-                avukatIslemleri.Show();
-                this.Hide();
-            }
-            else
-            {
-                // Dönüşüm başarısız, hata mesajı göster
-                MessageBox.Show("Giriş dizesi doğru biçimde değil. Lütfen geçerli bir MuvekkilID giriniz.");
-            }
+           
         }
 
         private void avukatID_TextChanged(object sender, EventArgs e)

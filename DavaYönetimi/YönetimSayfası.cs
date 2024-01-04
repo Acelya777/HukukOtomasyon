@@ -31,15 +31,19 @@ namespace HukukOtomasyon.DavaYönetimi
 
         private void OnDosya(object sender, EventArgs e)
         {
-            Dosya dosya = new Dosya();
-            dosya.Show();
-            this.Hide();
         }
 
         private void OnDava(object sender, EventArgs e)
         {
             Dava dava = new Dava();
             dava.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Anasayfa anasayfa = new Anasayfa();
+            anasayfa.Show();
             this.Hide();
         }
     }

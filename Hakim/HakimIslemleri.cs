@@ -155,15 +155,7 @@ namespace HukukOtomasyon.Hakim
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string hakimID = hakimId.Text;
-            int hakimIdInt;
-            if(int.TryParse(hakimID, out hakimIdInt))
-            {
-                MsSqlDelete(hakimIdInt);
-                HakimIslemleri hakimIslemleri = new HakimIslemleri();
-                hakimIslemleri.Show();
-                this.Hide();
-            }
+           
 
         }
 
@@ -194,7 +186,39 @@ namespace HukukOtomasyon.Hakim
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["Silme"].Index)
+            {
+                int avukatID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["hakimID"].Value);
 
+                HukukOtomasyon.Service.Services services = new HukukOtomasyon.Service.Services();
+
+                using (SqlConnection connection = services.ConnectDatabase())
+                {
+                    using (SqlCommand cmd = new SqlCommand("DELETE FROM Dava WHERE hakimID = @hakimID;", connection))
+                    {
+                        connection.Open();
+
+                        cmd.Parameters.AddWithValue("@hakimID", avukatID);
+                        cmd.CommandText = "DELETE FROM Hakim WHERE hakimID = @hakimID";
+
+
+                        int affectedRows = cmd.ExecuteNonQuery();
+
+
+                        if (affectedRows > 0)
+                        {
+                            MessageBox.Show("Silme işlemi başarılı.");
+                            HakimIslemleri hakimIslemleri = new HakimIslemleri();
+                            hakimIslemleri.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Silme işlemi başarısız.");
+                        }
+                    }
+                }
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
